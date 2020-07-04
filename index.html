@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Red Dead Redemption 2 Online Event Schedule</title>
+    <title>荒野大镖客2 线上活动时间表</title>
     <meta name="description" content="Timetable of RDR2 Online free-roam/role events, customised to your local time zone" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
@@ -25,89 +25,88 @@
   </head>
   <body class="dark">
     <main class="wrapper">
-      <h1>Red Dead Online Event Schedule</h1>
-      <p>The next <strong>Free-Roam Event</strong> is <b id="next-fr-event-name"></b> at
-        <b id="next-fr-event-time"></b> (in <span id="next-fr-event-eta"></span>).</p>
-      <p>The next <strong>Role Event</strong> is <b id="next-role-event-name"></b> at
-        <b id="next-role-event-time"></b> (in <span id="next-role-event-eta"></span>).</p>
-      <p>All times are in your local time zone<span id="locale"></span>,
-        according to your device's locale settings.</p>
-      <button id="theme" class="theme-button" aria-label="Change theme">
-        <span>Change theme</span>
+      <h1 align="center">荒野大镖客线上活动时间表</h1>
+      <p>下一场 <strong>自由模式活动</strong> 是 <b id="next-fr-event-name"></b> 将在
+        <b id="next-fr-event-time"></b> (约 <span id="next-fr-event-eta"></span>).</p>
+      <p>下一场 <strong>职业活动</strong> 是 <b id="next-role-event-name"></b> 将在
+        <b id="next-role-event-time"></b> (约 <span id="next-role-event-eta"></span>).</p>
+      <p>您所在的时区<span id="locale"></span>,
+        我们会根据您访问IP进行自动调整时区.</p>
+	      <p><small><strong>提示:</strong> 如果因为最近R星服务器更新，导致活动列表不准确的话，您可以点击【反馈问题】进行反馈。</small></p>
+      <button id="theme" class="theme-button" aria-label="Change theme">	  
+        <span>更改主题</span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 19.8a30.2 30.2 0 1 0 0 60.5 30.2 30.2 0 0 0 0-60.5zM23.8 50A26.2 26.2 0 0 1 48 23.9v52.2A26.2 26.2 0 0 1 23.8 50z"/></svg>
       </button>
-      <p><strong>Note:</strong> Some event data may no longer be accurate since recent updates. If you see an event that is listed incorrectly, please click the "Submit correction" link next to the relevant event below. The form should be auto-filled with most of the necessary information, so you just need to complete it to let me know the correct event type/time. Thanks, it helps a lot!</p>
-      <p>Find this useful? <a href="https://www.patreon.com/bePatron?u=24592842" class="become-patron-button">Become a patron</a> <a href="https://www.patreon.com/posts/ive-decided-to-38643559">I'll be matching and donating all funds received!</a></p>
       <noscript>
-        <p class="warning browsehappy">Please enable JavaScript to view the timetable</p>
+        <p class="warning browsehappy">请启动 JavaScript 脚本来查看此活动表</p>
       </noscript>
       <section class="schedule-wrapper">
         <section>
-          <h2>Free-roam schedule</h2>
-          <div id="free-roam-schedule" class="schedule"></div>
-          <p><strong>*</strong> Random events include Horseback Kills, Headshot Kills, Bow Kills, Longarm Kills, Sidearm Kills, Wild Animal Kills or Fishing</small></p>
+          <h2>自由模式活动时间表</h2>
+          <div id="free-roam-schedule" class="schedule"></div>          
         </section>
         <section>
-          <h2>Role schedule</h2>
+          <h2>职业活动时间表</h2>
           <div id="role-schedule" class="schedule"></div>
         </section>
       </section>
-      <p>Built with ♥ for the RDR2 community by <a href="http://richardwestenra.com">Richard Westenra</a>. Spotted any inaccurate data or bugs? <a href="https://github.com/richardwestenra/rdr2-free-roam-event-schedule">Submit an issue/PR on GitHub</a>, <a href="https://www.reddit.com/r/RedDeadOnline/comments/cjrf6a/i_made_a_freeroam_event_schedule_that_adjusts_to/">leave a comment on Reddit</a>, <a href="mailto:richard@richardwestenra.com">email me</a>, or <a href="https://twitter.com/richardwestenra">tweet at me</a>.</p>
-      <p><small><strong>Event data sources:</strong> <a href="https://www.reddit.com/r/RedDeadOnline/comments/c5wjmc/free_roam_events_schedule/es698ne/">Free-roam</a>. <a href="https://www.reddit.com/r/RedDeadOnline/comments/d4cpq5/role_specific_freeroam_event_timetable/">Role</a>, <a href="https://gtaforums.com/topic/930326-the-full-24h-schedule-of-the-freemode-events/#comments">mixed</a>, plus Adam, Ryan and everyone else who contributed to the updated schedule. <a href="https://thenounproject.com/term/contrast/765915">Contrast icon by Tawny Whatmore</a> from the <a href="https://thenounproject.com/">Noun Project</a></small></p>
-    </main>
+	  <p><small><strong>*</strong> 随机活动包括骑马击杀, 爆头击杀, 弓箭击杀, 长枪击杀, 手枪击杀, 击杀野生动物 或 钓鱼。</small></p>
+      <p><small><strong>本页面原创者：<a href="https://github.com/richardwestenra">Richard Westenra</a> 活动数据来源:</strong> <a href="https://www.reddit.com/r/RedDeadOnline/comments/c5wjmc/free_roam_events_schedule/es698ne/">Free-roam</a>. <a href="https://www.reddit.com/r/RedDeadOnline/comments/d4cpq5/role_specific_freeroam_event_timetable/">Role</a>, <a href="https://gtaforums.com/topic/930326-the-full-24h-schedule-of-the-freemode-events/#comments">mixed</a>, plus Adam, Ryan 其他所有对更新计划有贡献的人. <a href="https://thenounproject.com/term/contrast/765915">更改主题图标</a> 来自于 <a href="https://thenounproject.com/">Noun Project</a></small></p>
+      <p>捐赠原作者：<a href="https://www.patreon.com/bePatron?u=24592842" class="become-patron-button">成为善人</a> <a href="https://www.patreon.com/posts/ive-decided-to-38643559">捐赠会得到合理利用!</a></p>
+	</main>
     <script>
       // Base times are in UTC/GMT
       var freeRoamEvents = [
-        ['00:00', 'Master Archer'],
-        ['00:45', 'Railroad Baron'],
-        ['01:30', 'Wild Animal Kills'],
-        ['02:15', 'Fishing Challenge'],
-        ['03:00', 'Fool’s Gold'],
-        ['03:45', 'Master Archer'],
-        ['04:30', 'Random *'],
-        ['05:15', 'King of the Castle'],
-        ['06:00', 'Cold Dead Hands'],
-        ['06:45', 'Dispatch Rider'],
-        ['07:30', 'Railroad Baron'],
-        ['08:15', 'Wild Animal Kills'],
-        ['09:00', 'Fishing Challenge'],
-        ['09:45', 'Fool’s Gold'],
-        ['10:30', 'Master Archer'],
-        ['11:15', 'Random *'],
-        ['12:00', 'King of the Castle'],
-        ['12:45', 'Cold Dead Hands'],
-        ['13:30', 'Dispatch Rider'],
-        ['14:15', 'Railroad Baron'],
-        ['15:00', 'Wild Animal Kills'],
-        ['15:45', 'Fishing Challenge'],
-        ['16:30', 'Fool’s Gold'],
-        ['17:15', 'Master Archer'],
-        ['18:00', 'Random *'],
-        ['18:45', 'King of the Castle'],
-        ['19:30', 'Cold Dead Hands'],
-        ['20:15', 'Dispatch Rider'],
-        ['21:00', 'Railroad Baron'],
-        ['21:45', 'Wild Animal Kills'],
-        ['22:30', 'Fishing Challenge'],
-        ['23:15', 'Fool’s Gold']
+        ['00:00', '箭术大师'],
+        ['00:45', '铁路男爵'],
+        ['01:30', '击杀野生动物挑战赛'],
+        ['02:15', '钓鱼挑战'],
+        ['03:00', '愚人金'],
+        ['03:45', '箭术大师'],
+        ['04:30', '随机任务 *'],
+        ['05:15', '城堡之王'],
+        ['06:00', '死不放手'],
+        ['06:45', '快递骑手'],
+        ['07:30', '铁路男爵'],
+        ['08:15', '击杀野生动物挑战赛'],
+        ['09:00', '钓鱼挑战'],
+        ['09:45', '愚人金'],
+        ['10:30', '箭术大师'],
+        ['11:15', '随机任务 *'],
+        ['12:00', '城堡之王'],
+        ['12:45', '死不放手'],
+        ['13:30', '快递骑手'],
+        ['14:15', '铁路男爵'],
+        ['15:00', '击杀野生动物挑战赛'],
+        ['15:45', '钓鱼挑战'],
+        ['16:30', '愚人金'],
+        ['17:15', '箭术大师'],
+        ['18:00', '随机任务 *'],
+        ['18:45', '城堡之王'],
+        ['19:30', '死不放手'],
+        ['20:15', '快递骑手'],
+        ['21:00', '铁路男爵'],
+        ['21:45', '击杀野生动物挑战赛'],
+        ['22:30', '钓鱼挑战'],
+        ['23:15', '愚人金']
       ];
       var roleEvents = [
-        ['00:22', 'Day of Reckoning (Bounty Hunter)'],
-        ['01:52', 'Day of Reckoning (Bounty Hunter)'],
-        ['03:22', 'Salvage (Collector)'],
-        ['04:52', 'Trade Route (Trader)?'],
-        ['06:22', 'Manhunt (Bounty Hunter)'],
-        ['07:52', 'Condor Egg (Collector)'],
-        ['09:22', 'Day of Reckoning (Bounty Hunter)'],
-        ['10:52', 'Salvage (Collector)'],
-        ['12:22', 'Trade Route (Trader)'],
-        ['13:52', 'Manhunt (Bounty Hunter)'],
-        ['15:22', 'Condor Egg (Collector)'],
-        ['16:52', 'Day of Reckoning (Bounty Hunter)'],
-        ['18:22', 'Salvage (Collector)'],
-        ['19:52', 'Trade Route (Trader)'],
-        ['21:22', 'Manhunt (Bounty Hunter)'],
-        ['22:52', 'Condor Egg (Collector)'],
+        ['00:22', '审判之日（赏金猎人）'],
+        ['01:52', '审判之日（赏金猎人）'],
+        ['03:22', '抢救物品 (收藏家)'],
+        ['04:52', '商队路线 (商贩)'],
+        ['06:22', '搜捕/捕获 (赏金猎人)'],
+        ['07:52', '神鹫蛋 (收藏家)'],
+        ['09:22', '审判之日（赏金猎人）'],
+        ['10:52', '抢救物品 (收藏家)'],
+        ['12:22', '商队路线 (商贩)'],
+        ['13:52', '搜捕/捕获 (赏金猎人)'],
+        ['15:22', '神鹫蛋 (收藏家)'],
+        ['16:52', '审判之日（赏金猎人）'],
+        ['18:22', '抢救物品 (收藏家)'],
+        ['19:52', '商队路线 (商贩)'],
+        ['21:22', '搜捕/捕获 (赏金猎人)'],
+        ['22:52', '神鹫蛋 (收藏家)'],
       ];
     </script>
     <script src="main.js"></script>
