@@ -94,7 +94,7 @@
       queryString;
     anchor.setAttribute('href', url);
     anchor.className = 'form-link';
-    anchor.innerText = 'Submit correction';
+    anchor.innerText = '反馈问题';
     anchor.setAttribute('title', 'Incorrect time? Send me correct details and I\'ll update it.');
     return anchor;
   }
@@ -170,10 +170,10 @@
       return t === 1 ? '' : 's';
     }
     if (t < 60) {
-      return Math.round(t) + ' second' + s(t);
+      return Math.round(t) + ' 秒内开始';
     }
     t = Math.round(t / 60); // convert to minutes
-    return t + ' minute' + s(t);
+    return t + ' 分钟内开始';
   }
 
   /**
