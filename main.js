@@ -90,12 +90,13 @@
       })
       .join('&');
     var url =
-      'https://docs.google.com/forms/d/e/1FAIpQLSeaEdri09zJXnLksx4icLAY70tWGGDqyuPvaQZQMnc4R9R9ag/viewform?usp=pp_url&' +
-      queryString;
+      //'https://docs.google.com/forms/d/e/1FAIpQLSeaEdri09zJXnLksx4icLAY70tWGGDqyuPvaQZQMnc4R9R9ag/viewform?usp=pp_url&' +
+      '//shang.qq.com/wpa/qunwpa?idkey=2ddf6469cc6feb5335dd6997f3327da0fa28d6aaaffaa7d532fa794277c83d2b';
+      //queryString;
     anchor.setAttribute('href', url);
     anchor.className = 'form-link';
     anchor.innerText = '反馈问题';
-    anchor.setAttribute('title', 'Incorrect time? Send me correct details and I\'ll update it.');
+    anchor.setAttribute('title', '活动时间不正确？告诉我们，改正它！');
     return anchor;
   }
 
