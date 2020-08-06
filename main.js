@@ -91,7 +91,7 @@
       .join('&');
     var url =
       //'https://docs.google.com/forms/d/e/1FAIpQLSeaEdri09zJXnLksx4icLAY70tWGGDqyuPvaQZQMnc4R9R9ag/viewform?usp=pp_url&' +
-      '//shang.qq.com/wpa/qunwpa?idkey=2ddf6469cc6feb5335dd6997f3327da0fa28d6aaaffaa7d532fa794277c83d2b';
+      '//shang.qq.com/wpa/qunwpa?idkey=2ddf6469cc6feb5335dd6997f3327da0fa28d6aaaffaa7d532fa794277c83d2b'
       //queryString;
     anchor.setAttribute('href', url);
     anchor.className = 'form-link';
@@ -130,18 +130,18 @@
    */
   function calculateEventTimes(d, id, frequency) {
     var eventTime = d[0];
-    var now = new Date();
-    var dateTime = new Date(
-      [now.toDateString(), eventTime, 'UTC'].join(' ')
-    );
+    var now = Date.now();
+    var oneDay = minutesToMilliseconds(24 * 60);
+    var dateTime = getDateTime(now, eventTime);
     var eta = dateTime - now;
-    // Ensure that all event dates are in the future, to fix timezone bug
+    // Ensure that event dates are not in the past or too far
+    // in the future, where timezone is not UTC
+    if (eta > frequency) {
+      dateTime = getDateTime(now - oneDay, eventTime);
+      eta = dateTime - now;
+    }
     if (eta <= 0) {
-      var tomorrow = new Date();
-      tomorrow.setDate(now.getDate() + 1);
-      dateTime = new Date(
-        [tomorrow.toDateString(), eventTime, 'UTC'].join(' ')
-      );
+      dateTime = getDateTime(now + oneDay, eventTime);
       eta = dateTime - now;
     }
     return {
@@ -150,7 +150,7 @@
       name: d[1],
       eta: eta,
       etaText: getEtaText(eta),
-      isNext: eta > 0 && eta < frequency,
+      isNext: eta > 0 && eta <= frequency,
       timeString: dateTime.toLocaleTimeString('default', {
         hour: '2-digit',
         minute: '2-digit'
@@ -161,6 +161,16 @@
   }
 
   /**
+   * Get the Date object for an event
+   * @param {number} date Timestamp, e.g. Date.now()
+   */
+  function getDateTime(date, eventTime) {
+    return new Date(
+      [new Date(date).toDateString(), eventTime, 'UTC'].join(' ')
+    );
+  }
+
+  /**
    * Display time remaining in minutes or seconds
    * @param {number} t Time in milliseconds
    * @return {string} e.g. 1 minute, 35 minutes, 1 second, 40 seconds, etc.
@@ -168,9 +178,9 @@
   function getEtaText(t) {
     t = t / 1000; // convert to seconds
     function s(t) {
-      return t === 1 ? '' : 's';
+      return Math.abs(t) === 1 ? '' : 's';
     }
-    if (t < 60) {
+    if (Math.abs(t) < 60) {
       return Math.round(t) + ' 秒内开始';
     }
     t = Math.round(t / 60); // convert to minutes
