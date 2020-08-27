@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>荒野大镖客2 线上活动时间表</title>
-    <meta name="description" content="Timetable of RDR2 Online free-roam/role events, customised to your local time zone" />
+    <meta name="description" content="荒野大镖客2时间表,RDR2时间表,荒野大镖客2线上活动时间表" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script>
@@ -32,92 +32,105 @@
         <b id="next-role-event-time"></b> (约 <span id="next-role-event-eta"></span>).</p>
       <p>您所在的时区<span id="locale"></span>,
         我们会根据您访问IP进行自动调整时区。</p>
-		
-	      <p><strong>2020年8月2日更新:</strong> 增加了职业活动列表中关于博物学家的两个活动。</p>
-	      <p><small><strong>提示:</strong> 如果因为最近R星服务器更新，导致活动列表不准确的话，您可以点击【反馈问题】进行反馈。</small></p>
-<a href="https://www.rdr2ol.com" class="become-patron-button">首页</a>
-<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1413465791239995395&__biz=MzAxMzM0NDMyOA==#wechat_redirect" class="become-patron-button">每日任务</a>
-<a href="https://jeanropke.github.io/RDR2CollectorsMap/" class="become-patron-button">线上收藏家地图</a>
-<a href="https://jeanropke.github.io/RDOMap/" class="become-patron-button">动植物百科地图</a>
-<a href="https://sj.rdr2ol.com/" class="become-patron-button">自由模式活动时间表</a>
-<a href="//shang.qq.com/wpa/qunwpa?idkey=eaf1813701b3e552b93c47d003fc03cf90bb67012f1e3f852e35cc580bfd1d26"><img src="//pub.idqqimg.com/wpa/images/group.png" class="become-patron-button"></a>
-<p>捐赠原作者：<a href="https://www.patreon.com/bePatron?u=24592842" class="become-patron-button">成为善人</a> <a href="https://www.patreon.com/posts/ive-decided-to-38643559">捐赠会得到合理利用!</a></p>
-
-
-      <button id="theme" class="theme-button" aria-label="Change theme">	  
+      <button id="theme" class="theme-button" aria-label="Change theme">
         <span>更改主题</span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 19.8a30.2 30.2 0 1 0 0 60.5 30.2 30.2 0 0 0 0-60.5zM23.8 50A26.2 26.2 0 0 1 48 23.9v52.2A26.2 26.2 0 0 1 23.8 50z"/></svg>
       </button>
+	  
+		<a href="https://www.rdr2ol.com" class="become-patron-button">首页</a>
+		<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1413465791239995395&__biz=MzAxMzM0NDMyOA==#wechat_redirect" class="become-patron-button">每日任务</a>
+		<a href="https://jeanropke.github.io/RDR2CollectorsMap/" class="become-patron-button">线上收藏家地图</a>
+		<a href="https://jeanropke.github.io/RDOMap/" class="become-patron-button">动植物百科地图</a>
+		<a href="https://sj.rdr2ol.com/" class="become-patron-button">自由模式活动时间表</a>
+		<a href="//shang.qq.com/wpa/qunwpa?idkey=eaf1813701b3e552b93c47d003fc03cf90bb67012f1e3f852e35cc580bfd1d26"><img src="//pub.idqqimg.com/wpa/images/group.png" class="become-patron-button"></a>
+	  
+	  
+      <p>捐赠原作者：<a href="https://www.patreon.com/bePatron?u=24592842" class="become-patron-button">乐善好施</a> <a href="https://www.patreon.com/posts/ive-decided-to-38643559">捐赠会得到合理利用!</a></p>
+      <section id="news" class="news">
+        <header>
+          <h2>新闻</h2>
+          <span>(<a id="toggle-news" href="#" role="button">隐藏</a>)</span>
+        </header>
+        <ul>
+          <li><time datetime="2020-08-24">24th August:</time> Updated free-roam event schedule, once again thanks to <a href="https://www.reddit.com/r/RedDeadOnline/comments/i0n492/new_free_roam_events_schedule/g2o3j4f/">u/outerhaven84</a>.</li>
+          <li><time datetime="2020-08-23">23rd August:</time> Updated <a href="#role1">Role Event #1</a> as it appears to be Day of Reckoning.</li>
+          <li><time datetime="2020-08-21">21st August:</time> I've updated the Role Event schedule, thanks to <a href="https://www.reddit.com/r/RedDeadOnline/comments/i0n492/new_free_roam_events_schedule/g2bal5c/">u/outerhaven84</a>.</li>
+          <li><time datetime="2020-08-19">19th August:</time> There's been another update and the timetable is inaccurate again. If you find a complete list posted with the new times, please <a href="https://github.com/richardwestenra/rdr2-free-roam-event-schedule">let</a> <a href="mailto:richard@richardwestenra.com">me</a> <a href="https://twitter.com/richardwestenra">know</a>.</li>
+          <li><time datetime="2020-08-02">2nd August:</time> I've updated the role event timetable to include the new events from the Naturalist update (thanks to <a href="https://www.reddit.com/r/RedDeadOnline/comments/i0n492/new_free_roam_events_schedule/">Trinerity</a>).</li>
+        </ul>
+      </section>
       <noscript>
         <p class="warning browsehappy">请启动 JavaScript 脚本来查看此活动表</p>
       </noscript>
       <section class="schedule-wrapper">
         <section>
           <h2>自由模式活动时间表</h2>
-          <div id="free-roam-schedule" class="schedule"></div>          
+          <div id="free-roam-schedule" class="schedule"></div>
+          	<p><small><strong>*</strong> 随机活动包括骑马击杀, 爆头击杀, 弓箭击杀, 长枪击杀, 手枪击杀, 击杀野生动物 或 钓鱼等。</small></p>
         </section>
         <section>
           <h2>职业活动时间表</h2>
           <div id="role-schedule" class="schedule"></div>
         </section>
       </section>
-	  <p><small><strong>*</strong> 随机活动包括骑马击杀, 爆头击杀, 弓箭击杀, 长枪击杀, 手枪击杀, 击杀野生动物 或 钓鱼。</small></p>
-      <p><small><strong>本页面原创者：<a href="https://github.com/richardwestenra">Richard Westenra</a> 活动数据来源:</strong> <a href="https://www.reddit.com/r/RedDeadOnline/comments/c5wjmc/free_roam_events_schedule/es698ne/">Free-roam</a>. <a href="https://www.reddit.com/r/RedDeadOnline/comments/d4cpq5/role_specific_freeroam_event_timetable/">Role</a>, <a href="https://gtaforums.com/topic/930326-the-full-24h-schedule-of-the-freemode-events/#comments">mixed</a>, plus Adam, Ryan 其他所有对更新计划有贡献的人. <a href="https://thenounproject.com/term/contrast/765915">更改主题图标</a> 来自于 <a href="https://thenounproject.com/">Noun Project</a></small></p>
-	</main>
+		<p><small><strong>本页面原创者：<a href="https://github.com/richardwestenra">Richard Westenra</a> 活动数据来源:</strong> <a href="https://www.reddit.com/r/RedDeadOnline/comments/c5wjmc/free_roam_events_schedule/es698ne/">Free-roam</a>. <a href="https://www.reddit.com/r/RedDeadOnline/comments/d4cpq5/role_specific_freeroam_event_timetable/">Role</a>, <a href="https://gtaforums.com/topic/930326-the-full-24h-schedule-of-the-freemode-events/#comments">mixed</a>, plus Adam, Ryan 其他所有对更新计划有贡献的人. <a href="https://thenounproject.com/term/contrast/765915">更改主题图标</a> 来自于 <a href="https://thenounproject.com/">Noun Project</a></small></p>
+    </main>
     <script>
       // Base times are in UTC/GMT
-      var freeRoamEvents = [
-        ['00:00', '箭术大师'],
-        ['00:45', '铁路男爵'],
-        ['01:30', '击杀野生动物挑战赛'],
-        ['02:15', '钓鱼挑战'],
-        ['03:00', '愚人金'],
-        ['03:45', '箭术大师'],
-        ['04:30', '随机任务 *'],
-        ['05:15', '城堡之王'],
-        ['06:00', '死不放手'],
-        ['06:45', '快递骑手'],
-        ['07:30', '铁路男爵'],
-        ['08:15', '击杀野生动物挑战赛'],
-        ['09:00', '钓鱼挑战'],
-        ['09:45', '愚人金'],
-        ['10:30', '箭术大师'],
-        ['11:15', '随机任务 *'],
-        ['12:00', '城堡之王'],
-        ['12:45', '死不放手'],
-        ['13:30', '快递骑手'],
-        ['14:15', '铁路男爵'],
-        ['15:00', '击杀野生动物挑战赛'],
-        ['15:45', '钓鱼挑战'],
-        ['16:30', '愚人金'],
-        ['17:15', '箭术大师'],
-        ['18:00', '随机任务 *'],
-        ['18:45', '城堡之王'],
-        ['19:30', '死不放手'],
-        ['20:15', '快递骑手'],
-        ['21:00', '铁路男爵'],
-        ['21:45', '击杀野生动物挑战赛'],
-        ['22:30', '钓鱼挑战'],
-        ['23:15', '愚人金']
-      ];
-      var roleEvents = [
-        ['00:22','野生动物标记（博物学家）'],
-        ['01:52','审判之日（赏金猎人）'],
-        ['03:22','保护野生动物（博物学家）'],
-        ['04:52','野生动物标记（博物学家）'],
-        ['06:22','抢救物品 (收藏家)'],
-        ['07:52','保护野生动物（博物学家）'],
-        ['09:22','野生动物标记（博物学家）'],
-        ['10:52','商队路线 (商贩)'],
-        ['12:22','保护野生动物（博物学家）'],
-        ['13:52','野生动物标记（博物学家）'],
-        ['15:22','搜捕/捕获 (赏金猎人)'],
-        ['16:52','保护野生动物（博物学家）'],
-        ['18:22','野生动物标记（博物学家）'],
-        ['19:52','神鹫蛋 (收藏家)'],
-        ['21:22','审判之日（赏金猎人）'],
-        ['22:52','保护野生动物（博物学家）']
-      ];
+      window.rdoEvents = {
+        freeRoam: [
+          ['00:00','死不放手'],
+          ['00:45','铁路男爵'],
+          ['01:30','野生动物摄影'],
+          ['02:15','击杀野生动物挑战赛'],
+          ['03:00','野生动物摄影'],
+          ['03:45','钓鱼挑战'],
+          ['04:30','野生动物摄影'],
+          ['05:15','愚人金'],
+          ['06:00','野生动物摄影'],
+          ['06:45','箭术大师'],
+          ['07:30','野生动物摄影'],
+          ['08:15','随机任务 *'],
+          ['09:00','野生动物摄影'],
+          ['09:45','城堡之王'],
+          ['10:30','野生动物摄影'],
+          ['11:15','死不放手'],
+          ['12:00','野生动物摄影'],
+          ['12:45','快递骑手'],
+          ['13:30','野生动物摄影'],
+          ['14:15','铁路男爵'],
+          ['15:00','随机任务 *'],
+          ['15:45','野生动物摄影'],
+          ['16:30','钓鱼挑战'],
+          ['17:15','野生动物摄影'],
+          ['18:00','愚人金'],
+          ['18:45','野生动物摄影'],
+          ['19:30','箭术大师'],
+          ['20:15','野生动物摄影'],
+          ['21:00','钓鱼挑战'],
+          ['21:45','野生动物摄影'],
+          ['22:30','城堡之王'],
+          ['23:15','野生动物摄影']
+        ],
+        role: [
+          ['00:22','审判之日 (赏金猎人)'],
+          ['01:52','审判之日 (赏金猎人)'],
+          ['03:22','传说麋鹿保护 (博物学家)'],
+          ['04:52','野生动物标记 (博物学家)'],
+          ['06:22','抢救物品 (收藏家)'],
+          ['07:52','传说中的鳄鱼保护 (博物学家)'],
+          ['09:22','野生动物标记 (博物学家)'],
+          ['10:52','商队路线 (商贩)'],
+          ['12:22','传奇护狼 (博物学家)'],
+          ['13:52','野生动物标记 (博物学家)'],
+          ['14:22','搜捕/捕获 (赏金猎人)'],
+          ['16:52','传奇美洲狮保护 (博物学家)'],
+          ['18:22','野生动物标记 (博物学家)'],
+          ['19:52','神鹫蛋 (收藏家)'],
+          ['21:22','传说中的鳄鱼保护 (博物学家)'],
+          ['22:52','野生动物标记 (博物学家)']
+        ]
+      };
     </script>
     <script src="main.js"></script>
   </body>

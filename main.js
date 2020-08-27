@@ -29,15 +29,14 @@
 
   /**
    * Update the list of event times
-   * @param {Array} schedule List of event times
    * @param {string} key Property key (either freeRoam/role)
    */
-  function updateList(schedule, key) {
+  function updateList(key) {
     var el = elements[key];
     var frequency = minutesToMilliseconds(eventFrequency[key]);
     var list = document.createElement('ul');
 
-    schedule.map(function(t, i) {
+    window.rdoEvents[key].map(function(t, i) {
         return calculateEventTimes(t, i + 1, frequency);
       })
       .sort(function(a, b) {
@@ -90,13 +89,11 @@
       })
       .join('&');
     var url =
-      //'https://docs.google.com/forms/d/e/1FAIpQLSeaEdri09zJXnLksx4icLAY70tWGGDqyuPvaQZQMnc4R9R9ag/viewform?usp=pp_url&' +
-      '//shang.qq.com/wpa/qunwpa?idkey=2ddf6469cc6feb5335dd6997f3327da0fa28d6aaaffaa7d532fa794277c83d2b'
-      //queryString;
+      '//shang.qq.com/wpa/qunwpa?idkey=2ddf6469cc6feb5335dd6997f3327da0fa28d6aaaffaa7d532fa794277c83d2b';
     anchor.setAttribute('href', url);
     anchor.className = 'form-link';
     anchor.innerText = '反馈问题';
-    anchor.setAttribute('title', '活动时间不正确？告诉我们，改正它！');
+    anchor.setAttribute('title', '活动时间不正确？告诉我们，改正它！.');
     return anchor;
   }
 
@@ -181,10 +178,10 @@
       return Math.abs(t) === 1 ? '' : 's';
     }
     if (Math.abs(t) < 60) {
-      return Math.round(t) + ' 秒内开始';
+      return Math.round(t) + ' second' + s(t);
     }
     t = Math.round(t / 60); // convert to minutes
-    return t + ' 分钟内开始';
+    return t + ' minute' + s(t);
   }
 
   /**
@@ -224,8 +221,8 @@
    * Update both lists
    */
   function update() {
-    updateList(freeRoamEvents, 'freeRoam');
-    updateList(roleEvents, 'role');
+    updateList('freeRoam');
+    updateList('role');
   }
 
   // Initialise
@@ -260,5 +257,34 @@
   themeButton.addEventListener('click', function() {
     var newTheme = THEMES[0] === currentTheme ? THEMES[1] : THEMES[0];
     updateTheme(newTheme, true);
+  });
+})();
+
+
+//--- Toggle news ---//
+(function() {
+  var localStorageKey = 'rdr2-event-schedule-news';
+  var newsContainer = document.querySelector('#news');
+  var newsButton = newsContainer.querySelector('#toggle-news');
+  // Detect localstorage value and use that if it exists
+  var showNews = getLocalStorageValue();
+  toggleNews();
+
+  function getLocalStorageValue() {
+    var value = localStorage.getItem(localStorageKey);
+    return value && value === 'false' ? false : true;
+  }
+
+  function toggleNews() {
+    newsContainer.classList.toggle('hide', !showNews);
+    newsButton.innerText = showNews ? 'hide' : 'show';
+  }
+
+  // Toggle news visibility on button click
+  newsButton.addEventListener('click', function(event) {
+    showNews = !showNews;
+    toggleNews();
+    localStorage.setItem(localStorageKey, showNews);
+    event.preventDefault();
   });
 })();
