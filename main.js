@@ -178,10 +178,10 @@
       return Math.abs(t) === 1 ? '' : 's';
     }
     if (Math.abs(t) < 60) {
-      return Math.round(t) + ' 秒' + s(t);
+      return Math.round(t) + ' 秒';
     }
     t = Math.round(t / 60); // convert to minutes
-    return t + ' 分钟' + s(t);
+    return t + ' 分钟';
   }
 
   /**
